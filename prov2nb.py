@@ -265,6 +265,9 @@ provgraph.bind('prov', prov)
 # Need to give this as parameter instead of hard coding, will do this later.
 provgraph.parse("prov/prov-o.ttl", format="n3")
 
+#==========================================================================
+# Main Notebook
+#==========================================================================
 
 cells = []
 cells.append(createHeaderCell("Overview Report",1))
@@ -293,7 +296,7 @@ cells.append(createHeaderCell("Details",1))
 cells.append(createMarkdownCell("[Detailed Information](detailed-nb.ipynb)"))
 
 #Hide all inputs
-#cells.append(createMarkdownCell(getHideAllInputCell()))
+cells.append(createMarkdownCell(getHideAllInputCell()))
 
 cellsMap = {}
 cellsMap["cells"] = cells
@@ -315,6 +318,10 @@ result["worksheets"] = worksheets
 main = open("main-nb.ipynb","w")
 main.write(json.dumps(result))
 main.close()
+
+#==========================================================================
+#Detailed Notebook
+#==========================================================================
 
 cells = []
 cells.append(createHeaderCell("Detailed Instances",2))
