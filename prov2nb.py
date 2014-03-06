@@ -1,7 +1,11 @@
+#!/usr/bin/python
+
 import rdflib
 import logging
 import json
 import collections
+
+import sys, getopt
 
 logging.basicConfig()
 prompt_number = 1
@@ -250,130 +254,166 @@ def getHideAllInputCell():
 ###########################################################################
 
 #Prepare prefix and load the main input file
-provgraph = rdflib.Graph()
+def loadProvGraph (inputFileName):
 
-rdf  = rdflib.Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
-rdfs = rdflib.Namespace("http://www.w3.org/2000/01/rdf-schema#")
-d2s  = rdflib.Namespace("http://www.data2semantics.org/d2s-platform/")
-prov = rdflib.Namespace("http://www.w3.org/ns/prov#")
+    provgraph = rdflib.Graph()
+    
+    rdf  = rdflib.Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+    rdfs = rdflib.Namespace("http://www.w3.org/2000/01/rdf-schema#")
+    d2s  = rdflib.Namespace("http://www.data2semantics.org/d2s-platform/")
+    prov = rdflib.Namespace("http://www.w3.org/ns/prov#")
+    
+    provgraph.bind('rdf',  rdf)
+    provgraph.bind('rdfs', rdfs)
+    provgraph.bind('d2s',  d2s)
+    provgraph.bind('prov', prov)
+    
+    # Need to give this as parameter instead of hard coding, will do this later.
+    provgraph.parse(inputFileName, format="n3")
 
-provgraph.bind('rdf',  rdf)
-provgraph.bind('rdfs', rdfs)
-provgraph.bind('d2s',  d2s)
-provgraph.bind('prov', prov)
-
-# Need to give this as parameter instead of hard coding, will do this later.
-provgraph.parse("prov/prov-o.ttl", format="n3")
-
+    return provgraph
+    
 #==========================================================================
 # Main Notebook
 #==========================================================================
 
-cells = []
-cells.append(createHeaderCell("Overview Report",1))
-cells.append(createHeaderCell("Software",2))
-cells.append(createMarkdownCell(queryThePlan(provgraph), 3))
-#cells.append(createHeaderCell("Libraries",1))
-
-
-cells.append(createHeaderCell("Modules",2))
-modules = queryAllModules(provgraph)
-moduleCode = createIPYTable(modules, ["Module",  "Instances"], ["module","moduleInstance"], [ True, False])
-cells.append(createCodeCell(moduleCode));
-
-cells.append(createHeaderCell("Inputs",2))
-dataSets = queryAllDataset(provgraph)
-datasetCode = createIPYTable(dataSets, ["Datasets","Value"], ["input","value"], [False, False])
-cells.append(createCodeCell(datasetCode))
-
-cells.append(createHeaderCell("Outputs",2))
-
-outputSets = queryAllOutputs(provgraph)
-outputCode = createIPYTable(outputSets, ["Module ","Instance ", "Output", "Value"], ["module","moduleInstance", "outputLabel", "value"], [True, False, False, False])
-cells.append(createCodeCell(outputCode))
-
-cells.append(createHeaderCell("Details",1))
-cells.append(createMarkdownCell("[Detailed Information](detailed-nb.ipynb)"))
-
-#Hide all inputs
-cells.append(createMarkdownCell(getHideAllInputCell()))
-
-cellsMap = {}
-cellsMap["cells"] = cells
-
-worksheets = []
-worksheets.append(cellsMap)
-
-
-metadata = {}
-metadata["name"] = "Ducktape Provenance Report"
-
-
-result = {}
-result["metadata"] = metadata
-result["nbformat"] = 3
-result["nbformat_minor"] = 0
-result["worksheets"] = worksheets
-
-main = open("main-nb.ipynb","w")
-main.write(json.dumps(result))
-main.close()
-
+def createMainNoteBook(provgraph, outputPrefix):
+    cells = []
+    cells.append(createHeaderCell("Overview Report",1))
+    cells.append(createHeaderCell("Software",2))
+    cells.append(createMarkdownCell(queryThePlan(provgraph), 3))
+    #cells.append(createHeaderCell("Libraries",1))
+    
+    
+    cells.append(createHeaderCell("Modules",2))
+    modules = queryAllModules(provgraph)
+    moduleCode = createIPYTable(modules, ["Module",  "Instances"], ["module","moduleInstance"], [ True, False])
+    cells.append(createCodeCell(moduleCode));
+    
+    cells.append(createHeaderCell("Inputs",2))
+    dataSets = queryAllDataset(provgraph)
+    datasetCode = createIPYTable(dataSets, ["Datasets","Value"], ["input","value"], [False, False])
+    cells.append(createCodeCell(datasetCode))
+    
+    cells.append(createHeaderCell("Outputs",2))
+    
+    outputSets = queryAllOutputs(provgraph)
+    outputCode = createIPYTable(outputSets, ["Module ","Instance ", "Output", "Value"], ["module","moduleInstance", "outputLabel", "value"], [True, False, False, False])
+    cells.append(createCodeCell(outputCode))
+    
+    cells.append(createHeaderCell("Details",1))
+    cells.append(createMarkdownCell("[Detailed Information]("+outputPrefix+"-detail.ipynb)"))
+    
+    #Hide all inputs
+    cells.append(createMarkdownCell(getHideAllInputCell()))
+    
+    cellsMap = {}
+    cellsMap["cells"] = cells
+    
+    worksheets = []
+    worksheets.append(cellsMap)
+    
+    
+    metadata = {}
+    metadata["name"] = "Ducktape Provenance Report"
+    
+    
+    result = {}
+    result["metadata"] = metadata
+    result["nbformat"] = 3
+    result["nbformat_minor"] = 0
+    result["worksheets"] = worksheets
+    
+    main = open(outputPrefix+"-main.ipynb","w")
+    main.write(json.dumps(result))
+    main.close()
+    
 #==========================================================================
 #Detailed Notebook
 #==========================================================================
 
-cells = []
-cells.append(createHeaderCell("Detailed Instances",2))
-activities = queryAllActivities(provgraph)
-activityCode = createIPYTable(activities, ["Activity", "Start", "Stop "], ["activity","startTime","endTime"], [True, False, False])
-cells.append(createCodeCell(activityCode));
+def createDetailedNotebook(provgraph, outputPrefix):
+    cells = []
+    cells.append(createHeaderCell("Detailed Instances",2))
+    activities = queryAllActivities(provgraph)
+    activityCode = createIPYTable(activities, ["Activity", "Start", "Stop "], ["activity","startTime","endTime"], [True, False, False])
+    cells.append(createCodeCell(activityCode));
+    
+    cells.append(createHeaderCell("Detailed Activities",1))
+    cells.append(createHeaderCell("Activities input output", 2))
 
-cells.append(createHeaderCell("Detailed Activities",1))
-cells.append(createHeaderCell("Activities input output", 2))
-activitiesRec = queryActivityInputOutput(provgraph)
-activityIpyTableCode = createIPYTable(activitiesRec, ["Activity", "Input", "Output"], ["activity","input","output"], [False, True, True])
-cells.append(createCodeCell(activityIpyTableCode, collapsed="true"));
-cells.append(createHeaderCell("Activities Code ", 2))
+    activitiesRec = queryActivityInputOutput(provgraph)
+    activityIpyTableCode = createIPYTable(activitiesRec, ["Activity", "Input", "Output"], ["activity","input","output"], [False, True, True])
+    cells.append(createCodeCell(activityIpyTableCode, collapsed="true"));
+    cells.append(createHeaderCell("Activities Code ", 2))
+    
+    activitiesCells = createActivityCodes(activitiesRec)
+    
+    for actCell in activitiesCells:
+        actCell = "#This will be pseudo code which can be used to call Ducktape for verification\n"+actCell
+        cells.append(createCodeCell(actCell))
+    
+    cells.append(createMarkdownCell("[Main Notebook]("+outputPrefix+"-main.ipynb)"))
+    
+    cells.append(createHeaderCell("Detailed Outputs",2))
 
-activitiesCells = createActivityCodes(activitiesRec)
+    outputSets = queryAllOutputs(provgraph)
+    outputValues = groupByOutputType(outputSets)
+    
+    for curModule in outputValues:
+        cells.append(createHeaderCell(str(curModule),2))
+        cells.append(createHeaderCell("Outputs",3))
+        cells.append(createCodeCell(plotModuleOutputCode(outputValues[curModule])))
+    
+    
+    cellsMap = {}
+    cellsMap["cells"] = cells
+    
+    worksheets = []
+    worksheets.append(cellsMap)
+    
+    metadata = {}
+    metadata["name"] = "Detailed Ducktape Provenance Report"
+    
+    
+    result = {}
+    result["metadata"] = metadata
+    result["nbformat"] = 3
+    result["nbformat_minor"] = 0
+    result["worksheets"] = worksheets
+    
+    
+    detail = open(outputPrefix+"-detail.ipynb","w")
+    detail.write(json.dumps(result))
+    detail.close()
+    
+def main(argv):
+    inputfile = ''
+    outputPrefix= 'nb'
+    try:
+       opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
+    except getopt.GetoptError:
+       print 'prov2nb.py -i <inputfile> -o <outputPrefix>'
+       sys.exit(2)
 
-for actCell in activitiesCells:
-    actCell = "#This will be pseudo code which can be used to call Ducktape for verification\n"+actCell
-    cells.append(createCodeCell(actCell))
+    for opt, arg in opts:
+       if opt == '-h':
+          print 'prov2nb.py -i <inputfile> -o <outputPrefix>'
+          sys.exit()
+       elif opt in ("-i", "--ifile"):
+          inputfile = arg
+       elif opt in ("-o", "--ofile"):
+          outputPrefix = arg
 
-cells.append(createMarkdownCell("[Main Notebook](main-nb.ipynb)"))
+    if inputfile == '':
+       print 'prov2nb.py -i <inputfile> -o <outputPrefix>'
+       sys.exit(2)
 
-cells.append(createHeaderCell("Detailed Outputs",2))
-outputValues = groupByOutputType(outputSets)
-
-for curModule in outputValues:
-    cells.append(createHeaderCell(str(curModule),2))
-    cells.append(createHeaderCell("Outputs",3))
-    cells.append(createCodeCell(plotModuleOutputCode(outputValues[curModule])))
-
-
-
-cellsMap = {}
-cellsMap["cells"] = cells
-
-worksheets = []
-worksheets.append(cellsMap)
+    provgraph = loadProvGraph(inputfile)
+    createMainNoteBook(provgraph, outputPrefix)
+    createDetailedNotebook(provgraph, outputPrefix)
 
 
-metadata = {}
-metadata["name"] = "Detailed Ducktape Provenance Report"
-
-
-result = {}
-result["metadata"] = metadata
-result["nbformat"] = 3
-result["nbformat_minor"] = 0
-result["worksheets"] = worksheets
-
-
-detail = open("detailed-nb.ipynb","w")
-detail.write(json.dumps(result))
-detail.close()
-
-
+if __name__ == "__main__":
+   main(sys.argv[1:])
+    
