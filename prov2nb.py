@@ -52,7 +52,7 @@ def queryAllModules(g):
 			?moduleInstance rdfs:label ?module .
 			?moduleInstance	a prov:Activity .
 	    } 
-	    ORDER BY ?module
+	    ORDER BY ?module ?moduleInstance
 	    """
     result = g.query(qData)
 
@@ -274,17 +274,15 @@ provgraph.parse("prov/prov-o.ttl", format="n3")
 
 
 cells = []
-cells.append(createHeaderCell("Workflow",1))
+cells.append(createHeaderCell("Overview Report",1))
 cells.append(createMarkdownCell(queryThePlan(provgraph), 3))
 #cells.append(createHeaderCell("Libraries",1))
 
 
-cells.append(createHeaderCell("Modules and Instances",1))
 cells.append(createHeaderCell("Modules",2))
 modules = queryAllModules(provgraph)
 moduleCode = createIPYTable(modules, ["Module",  "Instances"], ["module","moduleInstance"], [ True, False])
 cells.append(createCodeCell(moduleCode));
-cells.append(createMarkdownCell("[Detailed Activities](detailed-nb.ipynb)"))
 
 cells.append(createHeaderCell("Datasets",2))
 dataSets = queryAllDataset(provgraph)
@@ -297,13 +295,8 @@ outputSets = queryAllOutputs(provgraph)
 outputCode = createIPYTable(outputSets, ["Module ","Instance ", "Output", "Value"], ["module","moduleInstance", "outputLabel", "value"], [True, False, False, False])
 cells.append(createCodeCell(outputCode))
 
-
-outputValues = groupByOutputType(outputSets)
-
-for curModule in outputValues:
-    cells.append(createHeaderCell(str(curModule),2))
-    cells.append(createHeaderCell("Outputs",3))
-    cells.append(createCodeCell(plotModuleOutputCode(outputValues[curModule])))
+cells.append(createHeaderCell("Details",1))
+cells.append(createMarkdownCell("[Detailed Information](detailed-nb.ipynb)"))
 
 #Hide all inputs
 #cells.append(createMarkdownCell(getHideAllInputCell()))
@@ -330,12 +323,12 @@ main.write(json.dumps(result))
 main.close()
 
 cells = []
-cells.append(createHeaderCell("Instances",2))
+cells.append(createHeaderCell("Detailed Instances",2))
 activities = queryAllActivities(provgraph)
 activityCode = createIPYTable(activities, ["Activity", "Start", "Stop "], ["activity","startTime","endTime"], [True, False, False])
 cells.append(createCodeCell(activityCode));
 
-cells.append(createHeaderCell("Activities",1))
+cells.append(createHeaderCell("Detailed Activities",1))
 cells.append(createHeaderCell("Activities input output", 2))
 activitiesRec = queryActivityInputOutput(provgraph)
 activityIpyTableCode = createIPYTable(activitiesRec, ["Activity", "Input", "Output"], ["activity","input","output"], [True, True, True])
@@ -349,6 +342,16 @@ for actCell in activitiesCells:
     cells.append(createCodeCell(actCell))
 
 cells.append(createMarkdownCell("[Main Notebook](main-nb.ipynb)"))
+
+cells.append(createHeaderCell("Detailed Outputs",2))
+outputValues = groupByOutputType(outputSets)
+
+for curModule in outputValues:
+    cells.append(createHeaderCell(str(curModule),2))
+    cells.append(createHeaderCell("Outputs",3))
+    cells.append(createCodeCell(plotModuleOutputCode(outputValues[curModule])))
+
+
 
 cellsMap = {}
 cellsMap["cells"] = cells
