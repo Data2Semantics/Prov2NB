@@ -1,0 +1,743 @@
+
+<http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> a <http://www.w3.org/ns/prov#Agent> .
+
+<http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> a <http://www.w3.org/ns/prov#Plan> .
+
+<http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> <http://www.w3.org/2000/01/rdf-schema#label> "ducktape on: wongiseng-note, versionID: 6847885952040544661"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> <http://www.w3.org/2000/01/rdf-schema#label> "Test workflow, date: Wed Feb 05 14:43:24 GMT+01:00 2014"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.859+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx10 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx10 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "10"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "21"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/input/first> <http://www.data2semantics.org/d2s-platform/value> "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/input/second> <http://www.data2semantics.org/d2s-platform/value> "7"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA0/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx11 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx11 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "11"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "24"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.860+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-5"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/input/first> <http://www.data2semantics.org/d2s-platform/value> "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/input/second> <http://www.data2semantics.org/d2s-platform/value> "8"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA1/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx12 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx12 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "27"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-6"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/input/first> <http://www.data2semantics.org/d2s-platform/value> "3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/input/second> <http://www.data2semantics.org/d2s-platform/value> "9"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA2/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.861+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.862+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx13 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx13 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.862+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "11"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.862+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "28"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.862+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/input/first> <http://www.data2semantics.org/d2s-platform/value> "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/input/second> <http://www.data2semantics.org/d2s-platform/value> "7"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA3/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.862+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx14 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx14 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "32"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/input/first> <http://www.data2semantics.org/d2s-platform/value> "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/input/second> <http://www.data2semantics.org/d2s-platform/value> "8"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA4/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx15 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx15 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "13"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "36"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-5"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/input/first> <http://www.data2semantics.org/d2s-platform/value> "4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/input/second> <http://www.data2semantics.org/d2s-platform/value> "9"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA5/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.863+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.864+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx16 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx16 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.864+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.864+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "35"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.864+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/input/first> <http://www.data2semantics.org/d2s-platform/value> "5"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/input/second> <http://www.data2semantics.org/d2s-platform/value> "7"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA6/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.864+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx17 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx17 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "13"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "40"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/input/first> <http://www.data2semantics.org/d2s-platform/value> "5"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/input/second> <http://www.data2semantics.org/d2s-platform/value> "8"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA7/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleA"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx18 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx18 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "14"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "45"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.865+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/input/first> <http://www.data2semantics.org/d2s-platform/value> "5"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/input/second> <http://www.data2semantics.org/d2s-platform/value> "9"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleA8/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.922+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.922+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleB"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx19 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx19 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.922+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "25"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.922+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "154"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.922+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/input/first> <http://www.data2semantics.org/d2s-platform/value> "11"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/input/second> <http://www.data2semantics.org/d2s-platform/value> "14"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB0/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.922+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.923+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleB"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx20 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx20 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.923+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "26"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.923+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "165"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.923+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-4"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/input/first> <http://www.data2semantics.org/d2s-platform/value> "11"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/input/second> <http://www.data2semantics.org/d2s-platform/value> "15"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB1/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.923+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleB"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx21 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx21 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "26"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "168"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/input/first> <http://www.data2semantics.org/d2s-platform/value> "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/input/second> <http://www.data2semantics.org/d2s-platform/value> "14"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB2/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleB"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx22 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx22 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "27"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "180"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-3"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/input/first> <http://www.data2semantics.org/d2s-platform/value> "12"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/input/second> <http://www.data2semantics.org/d2s-platform/value> "15"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB3/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.924+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.925+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleB"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx23 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx23 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.925+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "27"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.925+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "182"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.925+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-1"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/input/first> <http://www.data2semantics.org/d2s-platform/value> "13"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/input/second> <http://www.data2semantics.org/d2s-platform/value> "14"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB4/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5> a <http://www.w3.org/ns/prov#Activity> ;
+	<http://www.w3.org/ns/prov#startedAtTime> "2014-02-28T17:18:04.925+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#endedAtTime> "2014-02-28T17:18:04.926+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "ModuleB"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+_:node18hskjkbcx24 a <http://www.w3.org/ns/prov#Association> ;
+	<http://www.w3.org/ns/prov#hadPlan> <http://www.data2semantics.org/d2s-platform/workflow/e:\\Projects\\MLPlatform\\ducktape\\src\\test\\resources\\AnAdder.yaml/381fa188fafd60150a553873593fd86a> ;
+	<http://www.w3.org/ns/prov#agent> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5> <http://www.w3.org/ns/prov#qualifiedAssociation> _:node18hskjkbcx24 .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/output/result> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.926+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "28"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "result"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/output/product> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.926+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "195"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "product"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/output/difference> a <http://www.w3.org/ns/prov#Entity> ;
+	<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5> ;
+	<http://www.w3.org/ns/prov#generatedAtTime> "2014-02-28T17:18:04.926+01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+	<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.data2semantics.org/d2s-platform/ducktape/wongiseng-note/6847885952040544661> ;
+	<http://www.data2semantics.org/d2s-platform/value> "-2"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "difference"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/input/first> <http://www.data2semantics.org/d2s-platform/value> "13"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "first"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/input/first> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/input/first> a <http://www.data2semantics.org/d2s-platform/Dataset> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/input/second> <http://www.data2semantics.org/d2s-platform/value> "15"^^<http://www.w3.org/2001/XMLSchema#int> ;
+	<http://www.w3.org/2000/01/rdf-schema#label> "second"^^<http://www.w3.org/2001/XMLSchema#string> ;
+	a <http://www.w3.org/ns/prov#Entity> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5> <http://www.w3.org/ns/prov#used> <http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/input/second> .
+
+<http://www.data2semantics.org/d2s-platform/module/instance/wongiseng-note/381fa188fafd60150a553873593fd86a/1393604284934/ModuleB5/input/second> a <http://www.data2semantics.org/d2s-platform/Dataset> .
