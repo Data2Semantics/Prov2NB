@@ -39,7 +39,20 @@ def queryAllDataset(g):
 			?input  a  d2s:Dataset .
 			?input  d2s:value ?value .
 			?activity prov:used ?input .
-			?activity rdfs:label ?actLabel .
+			OPTIONAL { ?activity rdfs:label ?actLabel } . 
+                        MINUS { ?input prov:wasGeneratedBy ?a } .
+			} ORDER BY ?actLabel ?activity ?input 
+	    """
+    result = g.query(qData)
+    return result
+
+def queryAllInputs(g):
+    qData = """
+    	    SELECT ?input ?value WHERE {
+			?input  a  prov:Entity .
+			?input  d2s:value ?value .
+			?activity prov:used ?input .
+			OPTIONAL { ?activity rdfs:label ?actLabel } . 
                         MINUS { ?input prov:wasGeneratedBy ?a } .
 			} ORDER BY ?actLabel ?activity ?input 
 	    """
@@ -50,7 +63,7 @@ def queryAllModules(g):
     qData = """
     	    SELECT DISTINCT ?module ?moduleInstance 
 	    WHERE {
-			?moduleInstance rdfs:label ?module .
+			OPTIONAL { ?moduleInstance rdfs:label ?module } . 
 			?moduleInstance	a prov:Activity .
 	    } 
 	    ORDER BY ?module ?moduleInstance
@@ -63,7 +76,7 @@ def queryActivityInputOutput(g):
            SELECT ?activity ?output ?input ?inpValue ?outValue WHERE {
 	              ?activity prov:used ?input .
 		      ?output   prov:wasGeneratedBy ?activity .
-		      ?activity rdfs:label ?moduleLabel .
+		      OPTIONAL { ?activity rdfs:label ?moduleLabel } . 
 		      ?activity a prov:Activity .
 		      ?input a prov:Entity .
 		      ?output a prov:Entity .
@@ -81,9 +94,9 @@ def queryAllOutputs(g):
     qData = """
     	    SELECT ?output ?outputLabel ?value ?module ?moduleInstance WHERE {
 	    		?output prov:wasGeneratedBy ?moduleInstance . 
-			?output rdfs:label ?outputLabel .
+			OPTIONAL { ?output rdfs:label ?outputLabel } .
 			?moduleInstance	a prov:Activity .
-			?moduleInstance rdfs:label ?module .
+			OPTIONAL { ?moduleInstance rdfs:label ?module } .
 			?output a  prov:Entity .
 			?output d2s:value ?value .
 			MINUS { ?a prov:used ?output } 
@@ -170,8 +183,10 @@ apply_theme('basic') """
 
 
 def shortenURL(longURL):
-
-    result = longURL.split("/")[-1]
+    try :
+       result = longURL.split("/")[-1]
+    except:
+       return ""
     return result
 
 def plotModuleOutputCode( moduleOutput):
@@ -291,8 +306,8 @@ def createMainNoteBook(provgraph, outputPrefix):
     cells.append(createCodeCell(moduleCode));
     
     cells.append(createHeaderCell("Inputs",2))
-    dataSets = queryAllDataset(provgraph)
-    datasetCode = createIPYTable(dataSets, ["Datasets","Value"], ["input","value"], [False, False])
+    dataSets = queryAllInputs(provgraph)
+    datasetCode = createIPYTable(dataSets, ["Inputs","Value"], ["input","value"], [False, False])
     cells.append(createCodeCell(datasetCode))
     
     cells.append(createHeaderCell("Outputs",2))
