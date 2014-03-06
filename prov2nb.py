@@ -25,9 +25,6 @@ def queryThePlan(g):
     for row in g.query(qPlan): 
 	result += "\n\nAgent : " + row["agent"] + "\n\n"+ row["aID"]
 	result += "\n\nPlan  : " + row["plan"] + "\n\n"+ row["pID"]
-
-
-
     return result
 
 # Getting inputs which are also datasets
@@ -39,10 +36,10 @@ def queryAllDataset(g):
 			?input  d2s:value ?value .
 			?activity prov:used ?input .
 			?activity rdfs:label ?actLabel .
+                        MINUS { ?input prov:wasGeneratedBy ?a } .
 			} ORDER BY ?actLabel ?activity ?input 
 	    """
     result = g.query(qData)
-
     return result
 
 def queryAllModules(g):
@@ -55,7 +52,6 @@ def queryAllModules(g):
 	    ORDER BY ?module ?moduleInstance
 	    """
     result = g.query(qData)
-
     return result
 
 def queryActivityInputOutput(g):
@@ -69,6 +65,7 @@ def queryActivityInputOutput(g):
 		      ?output a prov:Entity .
 		      ?input d2s:value ?inpValue .
 		      ?output d2s:value ?outValue .
+                      MINUS { ?input prov:wasGeneratedBy ?a } .
   
 		      } ORDER BY ?moduleLabel ?activity ?output
 	   """
@@ -84,11 +81,11 @@ def queryAllOutputs(g):
 			?moduleInstance	a prov:Activity .
 			?moduleInstance rdfs:label ?module .
 			?output a  prov:Entity .
-			?output d2s:value ?value
+			?output d2s:value ?value .
+			MINUS { ?a prov:used ?output } 
 			} ORDER BY ?module ?moduleInstance ?outputLabel
 	    """
     result = g.query(qData)
-
     return result
 
 
@@ -103,7 +100,6 @@ def queryAllActivities(g):
     """
 
     result = g.query(qActivity)
-
     return result
 
 ###########################################################################
@@ -137,8 +133,6 @@ def createCodeCell(code_input, language="python", metadata={}, outputs=[], colla
     result["input"] = code_input
     result["prompt_number"] =prompt_number
     prompt_number +=1
-
-
     return result
 
 ###########################################################################
@@ -167,7 +161,6 @@ data = [ """+str(headers) +","
     result += """
 make_table(data)
 apply_theme('basic') """
-
     return result
 
 
@@ -275,6 +268,7 @@ provgraph.parse("prov/prov-o.ttl", format="n3")
 
 cells = []
 cells.append(createHeaderCell("Overview Report",1))
+cells.append(createHeaderCell("Software",2))
 cells.append(createMarkdownCell(queryThePlan(provgraph), 3))
 #cells.append(createHeaderCell("Libraries",1))
 
@@ -284,7 +278,7 @@ modules = queryAllModules(provgraph)
 moduleCode = createIPYTable(modules, ["Module",  "Instances"], ["module","moduleInstance"], [ True, False])
 cells.append(createCodeCell(moduleCode));
 
-cells.append(createHeaderCell("Datasets",2))
+cells.append(createHeaderCell("Inputs",2))
 dataSets = queryAllDataset(provgraph)
 datasetCode = createIPYTable(dataSets, ["Datasets","Value"], ["input","value"], [False, False])
 cells.append(createCodeCell(datasetCode))
@@ -331,7 +325,7 @@ cells.append(createCodeCell(activityCode));
 cells.append(createHeaderCell("Detailed Activities",1))
 cells.append(createHeaderCell("Activities input output", 2))
 activitiesRec = queryActivityInputOutput(provgraph)
-activityIpyTableCode = createIPYTable(activitiesRec, ["Activity", "Input", "Output"], ["activity","input","output"], [True, True, True])
+activityIpyTableCode = createIPYTable(activitiesRec, ["Activity", "Input", "Output"], ["activity","input","output"], [False, True, True])
 cells.append(createCodeCell(activityIpyTableCode, collapsed="true"));
 cells.append(createHeaderCell("Activities Code ", 2))
 
