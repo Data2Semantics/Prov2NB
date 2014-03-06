@@ -146,7 +146,7 @@ def createCodeCell(code_input, language="python", metadata={}, outputs=[], colla
 ###########################################################################
 
 
-def createIPYTable(records, headers, fields):
+def createIPYTable(records, headers, fields, shorten):
     result = """ 
 from ipy_table import *
 data = [ """+str(headers) +","
@@ -154,8 +154,12 @@ data = [ """+str(headers) +","
 
     for row in records:
 	result +=  "["
-	for f in fields:
-	    result += "'" + shortenURL(row[f]) +"',"
+	for i in range(len(fields)):
+            if(shorten[i]):
+	       result += "'" + shortenURL(row[fields[i]]) +"',"
+            else:
+	       result += "'" + row[fields[i]] +"',"
+
 	result +=  "],"
 
     result += "]"
@@ -278,41 +282,19 @@ cells.append(createMarkdownCell(queryThePlan(provgraph), 3))
 cells.append(createHeaderCell("Modules and Instances",1))
 cells.append(createHeaderCell("Modules",2))
 modules = queryAllModules(provgraph)
-moduleCode = createIPYTable(modules, ["Module", "Activity"], ["module","moduleInstance"])
+moduleCode = createIPYTable(modules, ["Module",  "Instances"], ["module","moduleInstance"], [ True, False])
 cells.append(createCodeCell(moduleCode));
-
-cells.append(createHeaderCell("Instances",2))
-activities = queryAllActivities(provgraph)
-activityCode = createIPYTable(activities, ["Activity", "Start", "Stop "], ["activity","startTime","endTime"])
-cells.append(createCodeCell(activityCode));
-
-cells.append(createHeaderCell("Activities",1))
-cells.append(createHeaderCell("Activities input output", 2))
-activitiesRec = queryActivityInputOutput(provgraph)
-activityIpyTableCode = createIPYTable(activitiesRec, ["Activity", "Input", "Output"], ["activity","input","output"])
-cells.append(createCodeCell(activityIpyTableCode, collapsed="true"));
-
-cells.append(createHeaderCell("Activities Code ", 2))
-
-activitiesCells = createActivityCodes(activitiesRec)
-
-for actCell in activitiesCells:
-    actCell = "#This will be pseudo code which can be used to call Ducktape for verification\n"+actCell
-    cells.append(createCodeCell(actCell))
-
-
-
-
+cells.append(createMarkdownCell("[Detailed Activities](detailed-nb.ipynb)"))
 
 cells.append(createHeaderCell("Datasets",2))
 dataSets = queryAllDataset(provgraph)
-datasetCode = createIPYTable(dataSets, ["Datasets","Value"], ["input","value"])
+datasetCode = createIPYTable(dataSets, ["Datasets","Value"], ["input","value"], [False, False])
 cells.append(createCodeCell(datasetCode))
 
 cells.append(createHeaderCell("Outputs",2))
 
 outputSets = queryAllOutputs(provgraph)
-outputCode = createIPYTable(outputSets, ["Module ","Instance ", "Output", "Value"], ["module","moduleInstance", "outputLabel", "value"])
+outputCode = createIPYTable(outputSets, ["Module ","Instance ", "Output", "Value"], ["module","moduleInstance", "outputLabel", "value"], [True, False, False, False])
 cells.append(createCodeCell(outputCode))
 
 
@@ -334,7 +316,7 @@ worksheets.append(cellsMap)
 
 
 metadata = {}
-metadata["name"] = "Provenance generated Report"
+metadata["name"] = "Ducktape Provenance Report"
 
 
 result = {}
@@ -343,5 +325,51 @@ result["nbformat"] = 3
 result["nbformat_minor"] = 0
 result["worksheets"] = worksheets
 
-print json.dumps(result)
+main = open("main-nb.ipynb","w")
+main.write(json.dumps(result))
+main.close()
+
+cells = []
+cells.append(createHeaderCell("Instances",2))
+activities = queryAllActivities(provgraph)
+activityCode = createIPYTable(activities, ["Activity", "Start", "Stop "], ["activity","startTime","endTime"], [True, False, False])
+cells.append(createCodeCell(activityCode));
+
+cells.append(createHeaderCell("Activities",1))
+cells.append(createHeaderCell("Activities input output", 2))
+activitiesRec = queryActivityInputOutput(provgraph)
+activityIpyTableCode = createIPYTable(activitiesRec, ["Activity", "Input", "Output"], ["activity","input","output"], [True, True, True])
+cells.append(createCodeCell(activityIpyTableCode, collapsed="true"));
+cells.append(createHeaderCell("Activities Code ", 2))
+
+activitiesCells = createActivityCodes(activitiesRec)
+
+for actCell in activitiesCells:
+    actCell = "#This will be pseudo code which can be used to call Ducktape for verification\n"+actCell
+    cells.append(createCodeCell(actCell))
+
+cells.append(createMarkdownCell("[Main Notebook](main-nb.ipynb)"))
+
+cellsMap = {}
+cellsMap["cells"] = cells
+
+worksheets = []
+worksheets.append(cellsMap)
+
+
+metadata = {}
+metadata["name"] = "Detailed Ducktape Provenance Report"
+
+
+result = {}
+result["metadata"] = metadata
+result["nbformat"] = 3
+result["nbformat_minor"] = 0
+result["worksheets"] = worksheets
+
+
+detail = open("detailed-nb.ipynb","w")
+detail.write(json.dumps(result))
+detail.close()
+
 
