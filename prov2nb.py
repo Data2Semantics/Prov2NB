@@ -137,7 +137,8 @@ def queryAllOutputs(g):
 def queryAllActivities(g):
     qActivity = """
  	SELECT ?activity ?startTime ?endTime WHERE {
-	    ?activity a prov:Activity .
+	    ?activity a ?activityClass .
+	    ?activityClass rdfs:subClassOf prov:Activity .
 	    ?activity rdfs:label ?l .
 	    ?activity prov:startedAtTime ?startTime .
 	    ?activity prov:endedAtTime ?endTime
@@ -173,6 +174,7 @@ def queryInputs(g, activity):
                    OPTIONAL { ?input a ?isAggregator . FILTER (?isAggregator = d2s:Aggregator ) }
 		} """ % (activity,activity)
     result = g.query(qInput)
+
     return result
 
 def queryOutputs(g, activity):
@@ -376,25 +378,29 @@ for x in df.columns:
        continue
     cons.append(x)
 
-df['Aggregator'] = df[cons[0]].astype(str)
-for x in cons[1:]:
-    df['Aggregator'] += df[x].astype(str)
+if len(cons) == 0:
+   result = df
+else:
+   df['Aggregator'] = df[cons[0]].astype(str)
+   for x in cons[1:]:
+      df['Aggregator'] += df[x].astype(str)
 
-aggIndexMap = {}
-for x in df['Aggregator']: 
-    if x not in aggIndexMap :
-       aggIndexMap[x] = len(aggIndexMap) 
-
-for i in range(len(df['Aggregator'])):
-    df['Aggregator'][i] = aggIndexMap[df['Aggregator'][i]]
-
-pivotRows = ['Aggregator']
-if 'parent0' in df.columns:
-   pivotRows.append('parent0')
-
-pt = pivot_table(df, rows= pivotRows)
-pt
-
+   aggIndexMap = {}
+   for x in df['Aggregator']: 
+      if x not in aggIndexMap :
+         aggIndexMap[x] = len(aggIndexMap) 
+   
+   for i in range(len(df['Aggregator'])):
+       df['Aggregator'][i] = aggIndexMap[df['Aggregator'][i]]
+   
+   pivotRows = ['Aggregator']
+   if 'parent0' in df.columns:
+      pivotRows.append('parent0')
+   
+   pt = pivot_table(df, rows= pivotRows)
+   result = pt
+result
+   
 """ % str(outputList)   
     return result
     
@@ -565,7 +571,7 @@ def loadProvGraph (inputFileName):
     
     rdf  = rdflib.Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
     rdfs = rdflib.Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    d2s  = rdflib.Namespace("http://prov.data2semantics.org/vocab/")
+    d2s  = rdflib.Namespace("http://prov.data2semantics.org/vocab/ducktape/")
     prov = rdflib.Namespace("http://www.w3.org/ns/prov#")
     
     provgraph.bind('rdf',  rdf)
