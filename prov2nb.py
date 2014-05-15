@@ -14,6 +14,7 @@ prompt_number = 1
 # SPARQL QUERIES
 ###########################################################################
 
+#Give me the plan (workflow) agent (software) that execute it 
 def queryThePlan(g):
     
     qPlan = """
@@ -35,7 +36,7 @@ def getPlanInfo(planRow):
 
     return result
 
-
+#Getting depended artifact from the plan
 def queryDependencies(g):
     qDependency = """ SELECT ?artifactID ?groupID ?versionID WHERE {
                       ?p a  prov:Plan .
@@ -52,13 +53,14 @@ def queryDependencies(g):
 def queryAllDataset(g):
     qData = """
     	    SELECT ?activityLabel ?inputLabel ?value WHERE {
-			?input  a  prov:Entity .
+                        ?input a ?inputClass .
+			?inputClass rdfs:subClassOf prov:Entity .
 			?input  a  d2s:Dataset .
 			?input  d2s:value ?value .
-                        ?input d2s:instanceOf ?inputClass .
                         ?inputClass rdfs:label ?inputLabel .
+                        ?activity a ?activityClass .
 			?activity prov:used ?input .
-                        ?activity d2s:instanceOf ?activityClass .
+			?activityClass rdfs:subClassOf prov:Activity .
                         ?activityClass rdfs:label ?activityLabel .
                         MINUS { ?input prov:wasGeneratedBy ?a } .
 			} ORDER BY ?activityLabel  
@@ -69,7 +71,8 @@ def queryAllDataset(g):
 def queryAllInputs(g):
     qData = """
     	    SELECT ?input ?value WHERE {
-			?input  a  prov:Entity .
+                        ?input a ?inputClass .
+			?inputClass rdfs:subClassOf prov:Entity .
 			?input  d2s:value ?value .
 			?activity prov:used ?input .
 			OPTIONAL { ?activity rdfs:label ?actLabel } . 
@@ -83,8 +86,8 @@ def queryAllModules(g):
     qData = """
     	    SELECT ?module (COUNT(?instance) as ?moduleInstance)
 	    WHERE {
-			?instance a prov:Activity .
-			?instance d2s:instanceOf ?moduleClass . 
+			?instance a ?moduleClass .
+			?moduleClass rdfs:subClassOf prov:Activity .
 			?moduleClass rdfs:label ?module . 
 	    } 
 	    GROUP BY ?moduleClass 
@@ -97,10 +100,12 @@ def queryActivityInputOutput(g):
            SELECT ?activity ?output ?input ?inpValue ?outValue WHERE {
 	              ?activity prov:used ?input .
 		      ?output   prov:wasGeneratedBy ?activity .
-		      OPTIONAL { ?activity d2s:instanceOf ?moduleClass } . 
-		      ?activity a prov:Activity .
-		      ?input a prov:Entity .
-		      ?output a prov:Entity .
+		      ?activity a ?moduleClass .
+		      ?moduleClass rdfs:subClassOf prov:Activity .
+		      ?input a ?inputClass .
+		      ?inputClass rdfs:subClassOf prov:Entity .
+		      ?output a ?outputClass .
+		      ?outputClass rdfs:subClassOf prov:Entity .
 		      ?input d2s:value ?inpValue .
 		      ?output d2s:value ?outValue .
                       MINUS { ?input prov:wasGeneratedBy ?a } .
@@ -113,13 +118,14 @@ def queryActivityInputOutput(g):
 def queryAllOutputs(g):
     qData = """
     	    SELECT ?output ?outputLabel ?value ?module ?moduleInstance WHERE {
-			?moduleInstance	a prov:Activity .
-			?moduleInstance d2s:instanceOf ?moduleClass  .
+			?moduleInstance	a ?moduleClass 
+			?moduleClass rdfs:subClassOf prov:Activity .
 			?moduleClass rdfs:label ?module .
-			?output a prov:Entity .
+			?output a ?outputClass .
+			?outputClass rdfs:subClassOf prov:Entity .
 	    		?output prov:wasGeneratedBy ?moduleInstance . 
 			?output d2s:value ?value .
-			?output d2s:instanceOf ?outputClass .
+
                         ?outputClass rdfs:label ?outputLabel  .
                         MINUS { ?a prov:used ?output } .
 
@@ -145,7 +151,8 @@ def queryLastActivities(g):
     qLastAct = """
                SELECT DISTINCT ?activity ?actLabel WHERE {
 		   ?out prov:wasGeneratedBy ?activity .
-                   ?activity d2s:instanceOf ?activityClass .
+                   ?activity a ?activityClass .
+		   ?activityClass rdfs:subClassOf prov:Activity .
                    ?activityClass rdfs:label ?actLabel .
 		   MINUS { ?a prov:used ?out } .
                } ORDER BY ?activity """
@@ -156,9 +163,11 @@ def queryInputs(g, activity):
     qInput= """
     	    SELECT ?input ?label ?value ?actLabel ?isAggregator WHERE {
 	           <%s> prov:used ?input . 			
-	           <%s> d2s:instanceOf ?actClass .
+	           <%s> a ?actClass .
+		   ?actClass rdfs:subClassOf prov:Activity .
                    ?actClass rdfs:label ?actLabel .
-                   ?input d2s:instanceOf ?inputClass .
+                   ?input a ?inputClass .
+		   ?inputClass rdfs:subClassOf prov:Entity .
                    ?inputClass rdfs:label ?label .
                    ?input d2s:value ?value .
                    OPTIONAL { ?input a ?isAggregator . FILTER (?isAggregator = d2s:Aggregator ) }
@@ -170,7 +179,8 @@ def queryOutputs(g, activity):
     qInput= """
     	    SELECT ?output ?label ?value WHERE {
 	           ?output prov:wasGeneratedBy <%s> . 				
-		   ?output d2s:instanceOf ?outputClass .
+		   ?output a ?outputClass .
+		   ?outputClass rdfs:subClassOf prov:Entity .
                    ?outputClass rdfs:label ?label .
                    ?output d2s:value ?value .
 		} ORDER BY ?output ?value """ % activity
@@ -555,7 +565,7 @@ def loadProvGraph (inputFileName):
     
     rdf  = rdflib.Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
     rdfs = rdflib.Namespace("http://www.w3.org/2000/01/rdf-schema#")
-    d2s  = rdflib.Namespace("http://platform.data2semantics.org/")
+    d2s  = rdflib.Namespace("http://prov.data2semantics.org/vocab/")
     prov = rdflib.Namespace("http://www.w3.org/ns/prov#")
     
     provgraph.bind('rdf',  rdf)
